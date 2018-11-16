@@ -1,0 +1,28 @@
+0 [main] INFO org.robotframework.remoteserver.RemoteServer  - Mapped path / to library com.github.rainmanwy.robotframework.sikulilib.SikuliLibrary.
+0 [main] INFO org.robotframework.remoteserver.RemoteServer  - Robot Framework remote server starting
+0 [main] INFO org.eclipse.jetty.server.Server  - jetty-7.x.y-SNAPSHOT
+6 [main] INFO org.eclipse.jetty.server.handler.ContextHandler  - started o.e.j.s.ServletContextHandler{/,null}
+154 [main] INFO org.eclipse.jetty.server.AbstractConnector  - Started SelectChannelConnector@0.0.0.0:61633
+154 [main] INFO org.robotframework.remoteserver.RemoteServer  - Robot Framework remote server started on port 61633.
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libopencv_imgproc248.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libopencv_imgproc248.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libgcc_s_seh-1.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libgcc_s_seh-1.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libopencv_core248.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libopencv_core248.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libwinpthread-1.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libwinpthread-1.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libz-1.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libz-1.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/VisionProxy.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\VisionProxy.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/liblept-3.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\liblept-3.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libopencv_highgui248.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libopencv_highgui248.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libpng14-14.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libpng14-14.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libstdc++-6.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libstdc++-6.dll (The process cannot access the file because it is being used by another process)
+[error] RunTimeINIT: extractResourceToFile: /sikulixlibs/windows/libs64/libtesseract-3.dll
+java.io.FileNotFoundException: C:\Users\karla\AppData\Roaming\Sikulix\SikulixLibs_201711011200\libtesseract-3.dll (The process cannot access the file because it is being used by another process)

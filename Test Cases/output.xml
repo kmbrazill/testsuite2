@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181115 15:42:29.159" generator="Robot 3.0.4 (Python 2.7.8 on win32)">
+<suite source="C:\Users\karla\PycharmProjects\testsuite\Test Cases\TC_001_Login.robot" id="s1" name="TC 001 Login">
+<test id="s1-t1" name="TC_001_Successfully Login to Agent Site">
+<kw type="setup" name="Start Browser and Maximize" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://agent.928club.com</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181115 15:42:34.342" level="INFO">Opening browser 'Chrome' to base url 'https://agent.928club.com'.</msg>
+<status status="PASS" endtime="20181115 15:42:38.068" starttime="20181115 15:42:34.342"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181115 15:42:39.203" starttime="20181115 15:42:38.068"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:42:39.203" starttime="20181115 15:42:34.342"></status>
+</kw>
+<kw name="Login as Agent" library="Resources">
+<arguments>
+<arg>1p1jpp5a</arg>
+<arg>aa111111</arg>
+<arg>168168</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="usr"]</arg>
+<arg>${AgentUsername}</arg>
+</arguments>
+<msg timestamp="20181115 15:42:39.204" level="INFO">Typing text '1p1jpp5a' into text field 'xpath://*[@id="usr"]'.</msg>
+<status status="PASS" endtime="20181115 15:42:39.275" starttime="20181115 15:42:39.204"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181115 15:42:41.276" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181115 15:42:41.276" starttime="20181115 15:42:39.275"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pwd"]</arg>
+<arg>${AgentPassword}</arg>
+</arguments>
+<msg timestamp="20181115 15:42:41.276" level="INFO">Typing text 'aa111111' into text field 'xpath://*[@id="pwd"]'.</msg>
+<status status="PASS" endtime="20181115 15:42:41.343" starttime="20181115 15:42:41.276"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20181115 15:42:46.353" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181115 15:42:46.353" starttime="20181115 15:42:41.344"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="flogin"]/div[3]/div[3]/button</arg>
+</arguments>
+<msg timestamp="20181115 15:42:46.353" level="INFO">Clicking button 'xpath://*[@id="flogin"]/div[3]/div[3]/button'.</msg>
+<status status="PASS" endtime="20181115 15:42:46.723" starttime="20181115 15:42:46.353"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20181115 15:42:49.733" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181115 15:42:49.733" starttime="20181115 15:42:46.723"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="sccode"]</arg>
+<arg>${SecurityCode}</arg>
+</arguments>
+<msg timestamp="20181115 15:42:49.733" level="INFO">Typing text '168168' into text field 'xpath://*[@id="sccode"]'.</msg>
+<status status="PASS" endtime="20181115 15:42:49.791" starttime="20181115 15:42:49.733"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20181115 15:42:50.796" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20181115 15:42:50.796" starttime="20181115 15:42:49.791"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="fsecure"]/div[2]/div/button</arg>
+</arguments>
+<msg timestamp="20181115 15:42:50.796" level="INFO">Clicking button 'xpath://*[@id="fsecure"]/div[2]/div/button'.</msg>
+<status status="PASS" endtime="20181115 15:42:51.841" starttime="20181115 15:42:50.796"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4</arg>
+</arguments>
+<msg timestamp="20181115 15:42:55.842" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20181115 15:42:55.842" starttime="20181115 15:42:51.841"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:42:55.843" starttime="20181115 15:42:39.204"></status>
+</kw>
+<kw type="teardown" name="Close Browser Window" library="Resources">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20181115 15:42:55.848" level="INFO">${Title} = Main User Agent</msg>
+<status status="PASS" endtime="20181115 15:42:55.848" starttime="20181115 15:42:55.844"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<msg timestamp="20181115 15:42:55.849" level="INFO">Main User Agent</msg>
+<status status="PASS" endtime="20181115 15:42:55.849" starttime="20181115 15:42:55.848"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181115 15:42:57.989" starttime="20181115 15:42:55.849"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:42:57.989" starttime="20181115 15:42:55.844"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:42:57.989" critical="yes" starttime="20181115 15:42:34.342"></status>
+</test>
+<test id="s1-t2" name="TC_002_Valid Username and Wrong Password">
+<kw type="setup" name="Start Browser and Maximize" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://agent.928club.com</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181115 15:42:57.989" level="INFO">Opening browser 'Chrome' to base url 'https://agent.928club.com'.</msg>
+<status status="PASS" endtime="20181115 15:43:01.037" starttime="20181115 15:42:57.989"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181115 15:43:02.178" starttime="20181115 15:43:01.038"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:43:02.178" starttime="20181115 15:42:57.989"></status>
+</kw>
+<kw name="Login as Agent" library="Resources">
+<arguments>
+<arg>1p1jpp5a</arg>
+<arg>aa111110</arg>
+<arg>168168</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="usr"]</arg>
+<arg>${AgentUsername}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:02.178" level="INFO">Typing text '1p1jpp5a' into text field 'xpath://*[@id="usr"]'.</msg>
+<status status="PASS" endtime="20181115 15:43:02.251" starttime="20181115 15:43:02.178"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181115 15:43:04.252" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181115 15:43:04.252" starttime="20181115 15:43:02.251"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pwd"]</arg>
+<arg>${AgentPassword}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:04.252" level="INFO">Typing text 'aa111110' into text field 'xpath://*[@id="pwd"]'.</msg>
+<status status="PASS" endtime="20181115 15:43:04.320" starttime="20181115 15:43:04.252"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20181115 15:43:09.332" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181115 15:43:09.332" starttime="20181115 15:43:04.320"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="flogin"]/div[3]/div[3]/button</arg>
+</arguments>
+<msg timestamp="20181115 15:43:09.332" level="INFO">Clicking button 'xpath://*[@id="flogin"]/div[3]/div[3]/button'.</msg>
+<status status="PASS" endtime="20181115 15:43:09.387" starttime="20181115 15:43:09.332"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20181115 15:43:12.387" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181115 15:43:12.387" starttime="20181115 15:43:09.387"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="sccode"]</arg>
+<arg>${SecurityCode}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:12.388" level="INFO">Typing text '168168' into text field 'xpath://*[@id="sccode"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181115 15:43:12.729" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181115 15:43:12.729" starttime="20181115 15:43:12.417"></status>
+</kw>
+<msg timestamp="20181115 15:43:12.730" level="FAIL">Element with locator 'xpath://*[@id="sccode"]' not found.</msg>
+<status status="FAIL" endtime="20181115 15:43:12.730" starttime="20181115 15:43:12.387"></status>
+</kw>
+<status status="FAIL" endtime="20181115 15:43:12.731" starttime="20181115 15:43:02.178"></status>
+</kw>
+<kw type="teardown" name="Close Browser Window" library="Resources">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20181115 15:43:12.735" level="INFO">${Title} = Agent 928BET</msg>
+<status status="PASS" endtime="20181115 15:43:12.735" starttime="20181115 15:43:12.731"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:12.735" level="INFO">Agent 928BET</msg>
+<status status="PASS" endtime="20181115 15:43:12.735" starttime="20181115 15:43:12.735"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181115 15:43:14.867" starttime="20181115 15:43:12.736"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:43:14.867" starttime="20181115 15:43:12.731"></status>
+</kw>
+<status status="FAIL" endtime="20181115 15:43:14.867" critical="yes" starttime="20181115 15:42:57.989">Element with locator 'xpath://*[@id="sccode"]' not found.</status>
+</test>
+<test id="s1-t3" name="TC_003_Wrong Username and Valid Password">
+<kw type="setup" name="Start Browser and Maximize" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://agent.928club.com</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181115 15:43:14.867" level="INFO">Opening browser 'Chrome' to base url 'https://agent.928club.com'.</msg>
+<status status="PASS" endtime="20181115 15:43:17.551" starttime="20181115 15:43:14.867"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181115 15:43:18.676" starttime="20181115 15:43:17.551"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:43:18.676" starttime="20181115 15:43:14.867"></status>
+</kw>
+<kw name="Login as Agent" library="Resources">
+<arguments>
+<arg>1p1jpp5b</arg>
+<arg>aa111111</arg>
+<arg>168168</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="usr"]</arg>
+<arg>${AgentUsername}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:18.676" level="INFO">Typing text '1p1jpp5b' into text field 'xpath://*[@id="usr"]'.</msg>
+<status status="PASS" endtime="20181115 15:43:18.760" starttime="20181115 15:43:18.676"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181115 15:43:20.768" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20181115 15:43:20.768" starttime="20181115 15:43:18.760"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pwd"]</arg>
+<arg>${AgentPassword}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:20.768" level="INFO">Typing text 'aa111111' into text field 'xpath://*[@id="pwd"]'.</msg>
+<status status="PASS" endtime="20181115 15:43:20.827" starttime="20181115 15:43:20.768"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20181115 15:43:25.833" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20181115 15:43:25.833" starttime="20181115 15:43:20.827"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="flogin"]/div[3]/div[3]/button</arg>
+</arguments>
+<msg timestamp="20181115 15:43:25.833" level="INFO">Clicking button 'xpath://*[@id="flogin"]/div[3]/div[3]/button'.</msg>
+<status status="PASS" endtime="20181115 15:43:25.892" starttime="20181115 15:43:25.833"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20181115 15:43:28.892" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20181115 15:43:28.892" starttime="20181115 15:43:25.892"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="sccode"]</arg>
+<arg>${SecurityCode}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:28.893" level="INFO">Typing text '168168' into text field 'xpath://*[@id="sccode"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181115 15:43:29.240" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181115 15:43:29.241" starttime="20181115 15:43:28.923"></status>
+</kw>
+<msg timestamp="20181115 15:43:29.241" level="FAIL">Element with locator 'xpath://*[@id="sccode"]' not found.</msg>
+<status status="FAIL" endtime="20181115 15:43:29.241" starttime="20181115 15:43:28.892"></status>
+</kw>
+<status status="FAIL" endtime="20181115 15:43:29.241" starttime="20181115 15:43:18.676"></status>
+</kw>
+<kw type="teardown" name="Close Browser Window" library="Resources">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20181115 15:43:29.246" level="INFO">${Title} = Agent 928BET</msg>
+<status status="PASS" endtime="20181115 15:43:29.246" starttime="20181115 15:43:29.242"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<msg timestamp="20181115 15:43:29.247" level="INFO">Agent 928BET</msg>
+<status status="PASS" endtime="20181115 15:43:29.247" starttime="20181115 15:43:29.246"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181115 15:43:31.379" starttime="20181115 15:43:29.247"></status>
+</kw>
+<status status="PASS" endtime="20181115 15:43:31.379" starttime="20181115 15:43:29.242"></status>
+</kw>
+<status status="FAIL" endtime="20181115 15:43:31.379" critical="yes" starttime="20181115 15:43:14.867">Element with locator 'xpath://*[@id="sccode"]' not found.</status>
+</test>
+<status status="FAIL" endtime="20181115 15:43:31.379" starttime="20181115 15:42:29.175"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="1">Critical Tests</stat>
+<stat fail="2" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="TC 001 Login" pass="1">TC 001 Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

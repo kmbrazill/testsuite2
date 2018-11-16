@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181114 10:26:49.290" generator="Robot 3.0.4 (Python 2.7.8 on win32)">
+<suite source="C:\Users\karla\PycharmProjects\testsuite\TC_001_Login.robot" id="s1" name="TC 001 Login">
+<test id="s1-t1" name="TC_001_Browser Start and Close">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181114 10:26:49.424" level="INFO">Opening browser 'Chrome' to base url 'https://agent.928club.com'.</msg>
+<status status="PASS" endtime="20181114 10:26:52.246" starttime="20181114 10:26:49.424"></status>
+</kw>
+<status status="PASS" endtime="20181114 10:26:52.247" critical="yes" starttime="20181114 10:26:49.423"></status>
+</test>
+<status status="PASS" endtime="20181114 10:26:52.249" starttime="20181114 10:26:49.292"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TC 001 Login" pass="1">TC 001 Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
