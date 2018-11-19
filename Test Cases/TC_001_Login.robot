@@ -4,7 +4,7 @@ Library  SikuliLibrary
 Resource  ../Resources/Resources.robot
 Test Setup  Start Browser and Maximize
 Test Teardown  Close Browser Window
-
+#These are settings
 
 *** Variables ***
 ${Browser}  Chrome
