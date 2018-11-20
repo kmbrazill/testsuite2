@@ -4,29 +4,117 @@ Library  ../ExternalKeywords/ExternalKeywords.py
 
 *** Variables ***
 ${Browser}  Chrome
-${URL}  https://agent.928club.com
+${URL}  http://192.168.89.216/Account/Profile
 
 *** Keywords ***
+
+#GENERAL TEST CASES
 Start Browser and Maximize
-    Open Browser  https://agent.928club.com  Chrome
+    Open Browser  ${URL}  ${Browser}
     Maximize Browser Window
 Close Browser Window
     ${Title}=   Get Title
     Log  ${Title}
     Close Browser
-Login as Agent
-    [Arguments]  ${AgentUsername}  ${AgentPassword}  ${SecurityCode}
-    SeleniumLibrary.Input Text  xpath://*[@id="usr"]  ${AgentUsername}
-    sleep  2
-    SeleniumLibrary.Input Text  xpath://*[@id="pwd"]  ${AgentPassword}
-    sleep  5
-    SeleniumLibrary.Click Button  xpath://*[@id="flogin"]/div[3]/div[3]/button
-    sleep  3
-    SeleniumLibrary.Input Text  xpath://*[@id="sccode"]  ${SecurityCode}
-    sleep  1
-    SeleniumLibrary.Click Button  xpath://*[@id="fsecure"]/div[2]/div/button
-    sleep  4
 
+#LOGIN
+Login with Username and Password
+    [Arguments]  ${InputUsername}  ${InputPassword}
+    SeleniumLibrary.Input Text  xpath://*[@id="root"]/div/div/div/div/div/div/div/form/div[1]/input  ${InputUsername}
+    sleep  2
+    SeleniumLibrary.Input Text  xpath://*[@id="root"]/div/div/div/div/div/div/div/form/div[2]/input  ${InputPassword}
+    sleep  2
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/div/div/div/div/div/form/div[3]/div[1]/button
+Enter One Time Pin
+    [Arguments]  ${InputPin}
+     sleep  3
+     wait until page contains element  xpath://*[@id="securityCode"][@placeholder="Enter security code"]
+     SeleniumLibrary.Input Text  xpath://*[@id="securityCode"][@placeholder="Enter security code"]  ${InputPin}
+     sleep  2
+     SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/div/div/div/div/div/form/div[2]/div/button
+
+#CREATE AGENT OR MEMBER - All keywords for Create Agent or Member will go here. Feel free to add or edit keywords.
+Navigate to Create Agent
+    wait until page contains element  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
+    Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
+    sleep  2
+    Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/ul/li[1]/a
+    sleep  2
+Navigate to Create Member
+    wait until page contains element  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
+    Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
+    sleep  2
+    Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/ul/li[2]/a
+    sleep  2
+Create Desired Username
+    [Arguments]  ${CreateUsername}
+    SeleniumLibrary.Input Text  xpath://*[@id="validationServerUsername"][@placeholder="Username"]  ${CreateUsername}
+    sleep  2
+Create Desired Password
+    [Arguments]  ${CreatePassword}
+    SeleniumLibrary.Input Text  xpath://*[@id="validationServerUsername"][@placeholder="Password"]  ${CreatePassword}
+    sleep  2
+Create Credit
+    [Arguments]  ${CreateCredit}
+    SeleniumLibrary.Input Text  xpath://*[@id="validationServerUsername"][@placeholder="Credit"]  ${CreateCredit}
+    sleep  2
+Click All Max Button
+    sleep  2
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/main/div[2]/div/div[1]/div/div/div/form/div[1]/div/div[2]/button[2]
+    sleep  3
+Click Save Button
+    sleep  2
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/main/div[2]/div/div[1]/div/div/div/form/div[1]/div/div[2]/button[3]
+    sleep  3
+Click Reset Button
+    sleep  2
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/main/div[2]/div/div[1]/div/div/div/form/div[1]/div/div[2]/button[4]
+    sleep  2
+Click Payment Settings Button
+    sleep  2
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/main/div[2]/div/div[1]/div/div/div/form/div[1]/div/div[2]/a/button
+    sleep  2
+
+#COPY AGENT - All keywords for Copy Agent will go here. Feel free to add or edit keywords.
+Click Copy Button for Agent/Member
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/main/div[2]/div/div[1]/div/div/div/form/div[1]/div/div[2]/button[1]
+    sleep  2
+Close Button for Copy Agent/Member
+    SeleniumLibrary.Click Button  xpath://html/body/div[2]/div/div[1]/div/div/div[3]/button[1]
+    sleep  3
+Save Button for Copy Agent/Member
+    SeleniumLibrary.Click Button  xpath://html/body/div[2]/div/div[1]/div/div/div[3]/button[2]
+Reset Button for Copy Agent/Member
+    SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/main/div[2]/div/div[1]/div/div/div/form/div[1]/div/div[2]/button[4]
+    sleep  2
+
+#USER LIST - All keywords for Create Member will go here. Feel free to add or edit keywords.
+Navigate to User List
+    Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
+    sleep  2
+    Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/ul/li[3]/a
+    sleep  2
+Select Normal User List Status
+  Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select
+  sleep  2
+  Select From List  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  Normal
+  sleep  2
+Select Locked User List Status
+  Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select
+  sleep  2
+  Select From List  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  Locked
+  sleep  2
+Select No Bet User List Status
+  Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select
+  sleep  2
+  Select From List  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  No Bet
+  sleep  2
+
+#ASSERTIONS
+
+
+
+#OTHER KEYWORDS
 Create Folder at Runtime
     create_folder
 
