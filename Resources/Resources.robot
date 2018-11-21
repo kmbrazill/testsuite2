@@ -122,6 +122,25 @@ Decrease Credit
   SeleniumLibrary.Click Button  xpath://html/body/div[2]/div/div[1]/div/div/div[3]/button[1]
   sleep  2
 
+Account Password Page
+  [Arguments]  ${OldPassword}  ${NewPassword}  ${ConfirmPassword}
+  Click Element  xpath://*[@id="root"]/div/div/div/div/ul/li[2]
+  sleep  2
+  Click Element  //*[@id="root"]/div/div/div/div/ul/li[2]/ul/li[2]/a
+  sleep  2
+  Click Element  xpath://*[@id="oldPasswordEye"]
+  sleep  2
+  Input Text  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div[2]/div[2]/div/input  ${OldPassword}
+  Click Element  xpath://*[@id="newPasswordEye"]
+  sleep  2
+  Input Text  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div[2]/div[3]/div/input  ${NewPassword}
+  sleep  2
+  Click Element  xpath://*[@id="confirmPasswordEye"]
+  sleep  2
+  Input Text  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div[2]/div[4]/div/input  ${ConfirmPassword}
+  sleep  2
+  Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div[2]/button
+
 #ASSERTIONS
 
 

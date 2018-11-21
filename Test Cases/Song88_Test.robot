@@ -36,6 +36,7 @@ ${URL}  http://192.168.89.216/Account/Profile
 #  Click Copy Button for Agent/Member
 #  Close Button for Copy Agent/Member
 #  Click Payment Settings Button
+
 TC_003_Navigate User List
 #   Login with Username and Password  AE5F2C4  password
 #   Enter One Time Pin  123456
@@ -45,5 +46,12 @@ TC_003_Navigate User List
 #   Select No Bet User List Status
    Increase Credit
    Decrease Credit
+
+TC_004_Update Password
+#    Scroll Page to Location  0  2000
+#    sleep  4
+#    Scroll Page to Location  2000  0
+#    sleep  4
+    Account Password Page  helloworld123  testp@ssw0rd  testp@ssw0rd
 
 
