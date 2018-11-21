@@ -16,6 +16,8 @@ Close Browser Window
     ${Title}=   Get Title
     Log  ${Title}
     Close Browser
+User Selects Timezone
+    SeleniumLibrary.Click Element  xpath://*[@id="root"]/div/header/ul/h6[1]/div/div[2]/select
 
 #LOGIN
 Login with Username and Password
@@ -27,7 +29,6 @@ Login with Username and Password
     SeleniumLibrary.Click Button  xpath://*[@id="root"]/div/div/div/div/div/div/div/form/div[3]/div[1]/button
 Enter One Time Pin
     [Arguments]  ${InputPin}
-     sleep  3
      wait until page contains element  xpath://*[@id="securityCode"][@placeholder="Enter security code"]
      SeleniumLibrary.Input Text  xpath://*[@id="securityCode"][@placeholder="Enter security code"]  ${InputPin}
      sleep  2
@@ -90,6 +91,7 @@ Reset Button for Copy Agent/Member
 
 #USER LIST - All keywords for Create Member will go here. Feel free to add or edit keywords.
 Navigate to User List
+    wait until page contains element  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
     Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/a
     sleep  2
     Click Link  xpath://*[@id="root"]/div/div/div/div/ul/li[4]/ul/li[3]/a
@@ -97,17 +99,27 @@ Navigate to User List
 Select Normal User List Status
   Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select
   sleep  2
-  Select From List  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  Normal
+  Select from List by Value  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  Normal
   sleep  2
 Select Locked User List Status
   Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select
   sleep  2
-  Select From List  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  Locked
+  Select from List by Value  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  Locked
   sleep  2
 Select No Bet User List Status
   Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select
   sleep  2
-  Select From List  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  No Bet
+  Select from List by Value  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[3]/select  No bet
+  sleep  2
+Increase Credit
+  sleep  2
+  Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[4]/div/div/span[1]/i
+  SeleniumLibrary.Click Button  xpath://html/body/div[2]/div/div[1]/div/div/div[3]/button[1]
+  sleep  1
+Decrease Credit
+  sleep  2
+  Click Element  xpath://*[@id="root"]/div/div/main/div[2]/div/div/div/div/div/div[3]/div/div/div/form/table/tbody/tr[2]/td[4]/div/div/span[2]/i
+  SeleniumLibrary.Click Button  xpath://html/body/div[2]/div/div[1]/div/div/div[3]/button[1]
   sleep  2
 
 #ASSERTIONS
